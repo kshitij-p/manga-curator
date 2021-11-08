@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Curator</title>
+
+    <base href="/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="nav/nav.min.css">
+    <link rel="stylesheet" href="userprofile/userprofile.min.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <%- include('../partials/alert.ejs') %>
+    <main class="container">
+        <div class="profile-container">
+            <div class="profile-image-container">
+                <img src="images/forms/userprofile.png" alt="" class="profile-image">
+            </div>
+            <div class="user-email-container">
+                <p class="user-email-text">Email: <b class="user-email"><%= user.email %></b></p>
+            </div>
+            <div class="user-button-container">
+                <a href="/reset" class="user-button btn-change">Change Password</a>
+                <a href="/notifications" class="user-button btn-manage" target="_blank" rel="noopener noreferrer"><img src="icons/editicon.svg" class="noti-icon"><p>NOTIFICATIONS</p></a>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+</html>

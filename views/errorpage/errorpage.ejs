@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <base href="/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="nav/nav.min.css">
+    <link rel="stylesheet" href="errorpage/errorpage.css">
+</head>
+<body>
+   <%- include('../partials/nav.ejs')%>
+    <main class="container">
+        <div class="error-container">
+            <div class="error-image-container">
+                <img src="images/sadcat.png" alt="" class="error-image">
+            </div>  
+            <div class="error-message-container">
+                <b class="error-message"> <%= error.message%> </b>
+                <b class="error-code"> <%= error.code %> </b>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/fittext.js"></script>
+    <script src="errorpage/errorpage.js"></script>
+</body>
+</html>

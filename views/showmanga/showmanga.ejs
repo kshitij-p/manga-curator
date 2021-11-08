@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Curator</title>
+    <base href="/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="nav/nav.min.css">
+    <link rel="stylesheet" href="showmanga/showmanga.css">
+</head>
+<body style="background-color: black;">
+    
+    <%- include('../partials/nav') %>
+
+    <main class="container">
+        <div class="trans-container">
+            <div class="content-container">
+                
+                <div class="image-info-container">
+                    <img src="<%=data.image_url%>" alt="akumetsu-image" class="manga-image">
+                    
+                    <div class="sub-info-container">
+                        <span class="manga-status-container manga-sub-info">Status: <span class="manga-status"><%=data.status%></span></span>
+                        <span class="manga-score-container manga-sub-info">Score: <span class="manga-score"><%=data.score%> / 10</span></span>
+                        <span class="manga-author-container manga-sub-info">Author: <span class="manga-author"><%= data.authors[0].name%></span></span>
+                    </div>
+                    
+                    
+
+                </div>
+                <div class="info-container">
+                    <h1 class="manga-title info-container-item"><%=data.title%></h1>
+                    <p class="manga-desc info-container-item"">
+                        <%= data.synopsis%>
+                    </p>
+
+                    <div class="manga-themes-container info-container-item">Themes: 
+                        <ul class="themes-list">
+                            <% for(let i of data.themes) { %>
+                                 <li class="theme-item"> <%= i.name %> </li>  
+                            <% }%>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="manga-genres-container info-container-item">Genres: 
+                        <ul class="genres-list">
+                            <% for(let i of data.genres) { %>
+                                <li class="genre-item"> <%= i.name %> </li> 
+                            <% } %>
+                        </ul>
+                    </div>
+                    <span class="manga-ch-container info-container-item">Chapters: <span class="manga-ch"><%= data.chapters %></span></span>
+                </div>
+                  
+                <div class="cta-container">
+                    <div class="cta-wrapper">
+                        
+                    <a href="/search/<%= data.mal_id %>" class="cta cta-similar">Search similar manga</a>                      
+                        
+                    <a href="/notifications" class="cta cta-noti" rel="noopener noreferrer" target="_blank"><img src="icons/editicon.svg" class="noti-icon"><p>Notification List</p></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="scripts/fittext.js"></script>
+    <script src="showmanga/showmanga.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Curator</title>
+    <base href="/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="nav/nav.min.css">
+    <link rel="stylesheet" href="forms/forms.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <%- include('../partials/alert.ejs') %>
+    <main class="container">
+        <div class="form-container">
+            <div class="user-image-container">
+                <img src="images/forms/userprofile.png" alt="" class="user-image">
+            </div>
+            <!-- Fill meeeee -->
+            <form action="/reset/<%= info.id %>/<%= info.resetid%>" method="POST" novalidate>
+                
+                <label for="form-password" class="form-label">New password</label>
+                <input type="password" id="form-password" class="form-input" name="password" placeholder="Enter your new password" required="true"
+                minlength='6' maxlength='32'>
+                <button class="cta-button">Reset </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="forms/validateSubmit.js"></script>
+    <script src="forms/validateForm.js"></script>
+</body>
+</html>

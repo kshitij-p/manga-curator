@@ -1,0 +1,36 @@
+{
+  "name": "mangacurator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.0.10",
+    "node-fetch": "^2.6.5",
+    "nodemailer": "^6.7.0",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "path": "^0.12.7",
+    "redis": "^3.1.2",
+    "sanitize-html": "^2.5.2",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {}
+}

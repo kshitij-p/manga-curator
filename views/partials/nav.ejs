@@ -1,0 +1,45 @@
+<nav class="fade-in">
+    <div class="expanded-menu hidden">
+        <div class="expanded-menu-content">
+            <ul class="expanded-menu-links">
+                <% if(!currUser) { %>
+                    <li><a href="/login" class="expanded-menu-links">Login</a></li>
+                    <li><a href="/register" class="expanded-menu-links">Register</a></li>
+                <% } else { %>
+                    <li><a href="/profile" class="expanded-menu-links">Profile</a></li>
+                    <li><a href="/logout" class="expanded-menu-links">Logout</a></li>
+                <% } %>
+            </ul>
+            
+        </div>
+    </div>
+<div class="navbar">
+    <div class="nav-page-links">
+        
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/search">Search</a></li>
+            <li class="menu">
+                
+                <img src="icons/hamburgermenuicon.svg" alt="">
+                
+            </li>
+        </ul>
+    </div>
+    <div class="nav-user-links">
+        <ul>
+            <% if(!currUser) { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            <% } else { %>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<script src="/nav/hamburgerMenu.js"></script>
+

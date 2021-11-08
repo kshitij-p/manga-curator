@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Manga Curator</title>
+    
+    <base href="/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="nav/nav.min.css">
+    <link rel="stylesheet" href="homepage/homepage.min.css">
+</head>
+<body>
+
+        <%- include('../partials/nav.ejs') %>
+        <%- include('../partials/alert.ejs') %>
+
+       <main class="container fade-in">
+        <div class="headings">
+            <h1 class="light">Discover</h1>
+            <h1 class="bold">New manga</h1>
+            <a href="/search" class="cta cta-get">GET STARTED</a>
+            
+        </div>
+        
+        <div class="collage-container">    
+        <div class="collage-img-container">
+           
+            <img src="homepage/jjk.png" alt="" class="collage-img">
+            <img src="homepage/chainsawman.png" alt="" class="collage-img">
+            <img src="homepage/berserk.png" alt="" class="collage-img">
+            <img src="homepage/akumetsu.png" alt="" class="collage-img">
+        </div>
+        
+        </div>
+        
+    
+        
+    </main>
+
+    <div class="page-2">
+        
+
+        <div class="card-container">
+            <div class="features fade-delayed">
+                <h2 class="">Features</h2>
+            </div>
+            
+            <div class="card-wrapper fade-delayed">
+                <div class="card">
+                    <div class="card-title">
+                        <h3 class="">Find new manga that's similar to another
+                            
+                        </h3>
+                        <img src="homepage/searchicon.svg" alt="" class="cardicon">
+                    </div>
+                    
+                    
+                    <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim 
+                        veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip
+                        </p>
+                </div>
+                
+
+                <div class="card" id="noti-card">
+                    <div class="card-title">
+                        <h3 id="noti-title">Get notified about new releases
+                            
+                        </h3>
+                        <img src="homepage/Bell.svg" alt="" class="cardicon">
+                    </div>
+                    
+                    
+                    <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim 
+                        veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip
+                        </p>
+                </div>
+
+            </div>
+            <a href="/search" class="cta cta-search fade-delayed">Search Now</a>
+        </div>
+        
+
+    </div>
+    
+    <script src="/homepage/homeanimation.js"></script>
+</body>
+</html>

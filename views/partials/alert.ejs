@@ -1,0 +1,19 @@
+
+<% if(success && success.length) { %>
+<div class="alert alert-success">
+    <b class="alert-text"><%= success %></b>
+    <button type="button" class="alert-close">×</button>
+</div>
+
+<% } %>
+
+
+<% if(error && error.length) { %>
+    <div class="alert alert-error">
+        <b class="alert-text"><%= error %></b>
+        <button type="button" class="alert-close">×</button>
+    </div>
+    
+<% } %>
+
+<script src="scripts/alertClose.js"></script>
